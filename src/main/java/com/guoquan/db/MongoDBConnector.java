@@ -16,7 +16,7 @@ public class MongoDBConnector {
 	private MongoDatabase mongoDBInstance;
 	private ArrayList<Product> products;
 
-	public  ArrayList<Product> getProducts(String database, String collection) {
+	public ArrayList<Product> getProducts(String database, String collection) {
 		MongoCollection<Document> collections = null;
 		if (mongoClient == null) {
 			MongoClientURI connectionString = new MongoClientURI("mongodb://localhost:27017");
@@ -49,5 +49,4 @@ public class MongoDBConnector {
 		}
 		return products;
 	}
-
 }
